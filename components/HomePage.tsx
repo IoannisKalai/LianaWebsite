@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { AboutIntro } from "@/components/AboutIntro";
 import { HomeCarousel } from "@/components/HomeCarousel";
 import { assetPath } from "@/lib/asset";
 import { getHomeConfig } from "@/lib/home";
@@ -97,28 +98,11 @@ export function HomePage() {
       <HomeCarousel images={home.carouselImages.map(assetPath)} />
 
       <section className="bg-[#F2F0EB] px-6 py-12 md:px-12 md:py-14 lg:px-16">
-        <div className="mx-auto grid max-w-[1100px] grid-cols-1 items-start gap-8 lg:grid-cols-[1fr_240px] lg:gap-12">
-          <div className="space-y-4 font-[family-name:var(--font-montserrat)] text-[13px] leading-[1.65] text-neutral-900 md:text-[14px] md:leading-[1.7]">
-            {home.aboutPreview.paragraphs.map((paragraph, index) => (
-              <p
-                key={index}
-                className={paragraph.bold ? "font-bold" : "font-normal"}
-              >
-                {paragraph.text}
-              </p>
-            ))}
-          </div>
-          <div className="relative mx-auto aspect-[5/6.5] w-full max-w-[240px] overflow-hidden bg-neutral-100 lg:mx-0 lg:max-w-none">
-            <Image
-              src={assetPath(home.aboutPreview.portraitImage)}
-              alt={site.name}
-              fill
-              className="object-cover"
-              sizes="240px"
-              unoptimized
-            />
-          </div>
-        </div>
+        <AboutIntro
+          paragraphs={home.aboutPreview.paragraphs}
+          portraitImage={home.aboutPreview.portraitImage}
+          portraitAlt={site.name}
+        />
         <div className="mx-auto mt-6 flex max-w-[1100px] justify-end md:mt-8">
           <Link
             href={home.aboutPreview.readMoreHref}

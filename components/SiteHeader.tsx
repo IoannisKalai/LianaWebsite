@@ -4,7 +4,7 @@ import { getSiteConfig } from "@/lib/site";
 const navItems = [
   { href: "/about/", label: "About", align: "start" as const },
   { href: "/#projects", label: "Projects", align: "center" as const },
-  { href: "/#contact", label: "Contact", align: "end" as const },
+  { href: "/about/#contact", label: "Contact", align: "end" as const },
 ];
 
 export function SiteHeader() {

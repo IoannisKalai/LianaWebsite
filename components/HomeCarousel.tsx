@@ -6,6 +6,9 @@ import { useCallback, useState } from "react";
 interface HomeCarouselProps {
   images: string[];
   alt?: string;
+  /** Tailwind classes for the slide frame (default: wide hero). */
+  frameClassName?: string;
+  imageSizes?: string;
 }
 
 function ChevronLeft({ className }: { className?: string }) {
@@ -46,7 +49,12 @@ function ChevronRight({ className }: { className?: string }) {
   );
 }
 
-export function HomeCarousel({ images, alt = "Featured project" }: HomeCarouselProps) {
+export function HomeCarousel({
+  images,
+  alt = "Featured project",
+  frameClassName = "aspect-[16/7] min-h-[300px] lg:min-h-[400px]",
+  imageSizes = "100vw",
+}: HomeCarouselProps) {
   const [index, setIndex] = useState(0);
   const total = images.length;
 
@@ -62,14 +70,14 @@ export function HomeCarousel({ images, alt = "Featured project" }: HomeCarouselP
 
   return (
     <section className="relative w-full bg-neutral-200" aria-label="Featured images">
-      <div className="relative aspect-[16/7] w-full min-h-[300px] lg:min-h-[400px]">
+      <div className={`relative w-full ${frameClassName}`}>
         <Image
           key={images[index]}
           src={images[index]}
           alt={`${alt} — slide ${index + 1} of ${total}`}
           fill
           className="object-cover"
-          sizes="100vw"
+          sizes={imageSizes}
           priority={index === 0}
           unoptimized
         />

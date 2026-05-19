@@ -46,6 +46,35 @@ export interface HomeAboutParagraph {
   bold: boolean;
 }
 
+export interface AboutCvEntry {
+  primary: string;
+  lines: string[];
+}
+
+export interface AboutPageConfig {
+  heroImage: string;
+  heroAlt: string;
+  introduction: {
+    paragraphs: HomeAboutParagraph[];
+    portraitImage: string;
+  };
+  education: {
+    title: string;
+    entries: AboutCvEntry[];
+  };
+  workExperience: {
+    title: string;
+    entries: AboutCvEntry[];
+  };
+  contact: {
+    title: string;
+    carouselImages: string[];
+    email: string;
+    phone: string;
+    addressLines: string[];
+  };
+}
+
 export interface HomeConfig {
   vibeImage: string;
   vibeImageAlt: string;
