@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Liana Kalaitzoglou — Architect Portfolio
 
-## Getting Started
+A minimal, MAIO-inspired portfolio site built with [Next.js](https://nextjs.org), React, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Adding a project
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Images** — Create a folder under `public/projects/your-project-slug/` and add:
+   - `cover.jpg` (or `.webp`) — thumbnail for the home grid
+   - Optional gallery images (`01.jpg`, `02.jpg`, …)
 
-## Learn More
+2. **Metadata** — Add an entry to [`content/projects.json`](content/projects.json):
 
-To learn more about Next.js, take a look at the following resources:
+```json
+{
+  "slug": "your-project-slug",
+  "title": "Project Title",
+  "subtitle": "Typology · City, Country",
+  "year": 2025,
+  "coverImage": "/projects/your-project-slug/cover.jpg",
+  "orientation": "vertical",
+  "description": "One or two sentences describing the project.",
+  "gallery": [
+    "/projects/your-project-slug/cover.jpg",
+    "/projects/your-project-slug/01.jpg"
+  ]
+}
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Use `"orientation": "horizontal"` for wide cover images (landscape) or `"vertical"` for portrait covers — this affects the masonry grid on the home page.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Restart the dev server if it is running; the new project appears on the home page and at `/project/your-project-slug`.
 
-## Deploy on Vercel
+## Editing About & contact
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Bio sections** — Edit [`content/about.md`](content/about.md). Use `## Section title` for each block (About, Education, Experience, etc.).
+- **Contact & social** — Edit [`content/site.json`](content/site.json).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Placeholder images
+
+SVG placeholders are generated for demo projects:
+
+```bash
+node scripts/generate-placeholders.mjs
+```
+
+Replace them with your own photography when ready.
+
+## Deploy preview (GitHub Pages)
+
+Pushes to `master` or `main` run [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) and publish a static build to GitHub Pages.
+
+- **Preview URL:** `https://<your-github-username>.github.io/LianaWebsite/`
+- **Repo:** private on GitHub; enable Pages under **Settings → Pages → Build and deployment → GitHub Actions** (done automatically on first deploy if you use `gh` setup below).
+- **Local dev** uses no base path; CI sets `GITHUB_PAGES=true` so assets load under `/LianaWebsite/`.
+
+> GitHub Pages on a **private** repository requires a [paid GitHub plan](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#limits) (Pro or higher). On the free plan, use a public repo or deploy to Vercel instead.
+
+## Deploy to Vercel (production)
+
+1. Push this repository to GitHub.
+2. Sign in at [vercel.com](https://vercel.com) and **Import** the repository.
+3. Vercel detects Next.js automatically — deploy with default settings (no `GITHUB_PAGES` env var).
+4. Add a custom domain under **Project → Settings → Domains** when you have one.
+
+## Project structure
+
+```
+app/              Pages (home, about, project detail)
+components/       UI components
+content/          site.json, projects.json, about.md
+lib/              Data loaders and types
+public/projects/  Your project images
+```

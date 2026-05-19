@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "coastal-residence",
+    "title": "Coastal Residence",
+    "subtitle": "Private house · Cyclades, Greece",
+    "year": 2025,
+    "coverImage": "/projects/coastal-residence/cover.svg",
+    "orientation": "vertical",
+    "featured": true,
+    "description": "A compact holiday home organized around a central courtyard. Whitewashed volumes and deep openings frame sea views while limiting direct sun exposure.",
+    "gallery": [
+      "/projects/coastal-residence/cover.svg",
+      "/projects/coastal-residence/detail-1.svg",
+      "/projects/coastal-residence/detail-2.svg"
+    ]
+  },
+  {
+    "slug": "urban-apartment",
+    "title": "Urban Apartment",
+    "subtitle": "Interior renovation · Athens, Greece",
+    "year": 2024,
+    "coverImage": "/projects/urban-apartment/cover.svg",
+    "orientation": "horizontal",
+    "featured": true,
+    "description": "Reconfiguration of a 1970s apartment into an open plan with a continuous oak joinery element that integrates storage, kitchen, and passage.",
+    "gallery": [
+      "/projects/urban-apartment/cover.svg",
+      "/projects/urban-apartment/detail-1.svg"
+    ]
+  },
+  {
+    "slug": "gallery-renovation",
+    "title": "Gallery Renovation",
+    "subtitle": "Cultural · Athens, Greece",
+    "year": 2024,
+    "coverImage": "/projects/gallery-renovation/cover.svg",
+    "orientation": "vertical",
+    "description": "Conversion of a ground-floor retail unit into a white-box gallery. Existing structure is exposed selectively; new lighting tracks define flexible display zones.",
+    "gallery": ["/projects/gallery-renovation/cover.svg"]
+  },
+  {
+    "slug": "courtyard-house",
+    "title": "Courtyard House",
+    "subtitle": "Competition · Peloponnese, Greece",
+    "year": 2023,
+    "coverImage": "/projects/courtyard-house/cover.svg",
+    "orientation": "horizontal",
+    "description": "Competition entry proposing a single-story dwelling wrapped around a planted patio. Rooms open inward for privacy and cross ventilation.",
+    "gallery": [
+      "/projects/courtyard-house/cover.svg",
+      "/projects/courtyard-house/detail-1.svg"
+    ]
+  },
+  {
+    "slug": "workspace-studio",
+    "title": "Workspace Studio",
+    "subtitle": "Commercial · Thessaloniki, Greece",
+    "year": 2023,
+    "coverImage": "/projects/workspace-studio/cover.svg",
+    "orientation": "vertical",
+    "description": "Adaptive reuse of an industrial bay into a shared design studio. A mezzanine insert adds meeting space without blocking daylight from clerestory windows.",
+    "gallery": ["/projects/workspace-studio/cover.svg"]
+  },
+  {
+    "slug": "pavilion-garden",
+    "title": "Garden Pavilion",
+    "subtitle": "Ephemeral architecture · Athens, Greece",
+    "year": 2022,
+    "coverImage": "/projects/pavilion-garden/cover.svg",
+    "orientation": "horizontal",
+    "description": "Temporary timber pavilion for an open-air program. Modular frames support fabric screens that filter light and define seating alcoves.",
+    "gallery": ["/projects/pavilion-garden/cover.svg"]
+  }
+]

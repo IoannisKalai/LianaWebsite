@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="450" height="300" viewBox="0 0 450 300">
+  <rect width="450" height="300" fill="#ebebeb"/>
+  <rect x="36" y="24" width="378" height="252" fill="#d4d4d4"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#737373" font-family="system-ui, sans-serif" font-size="13">courtyard house</text>
+</svg>
