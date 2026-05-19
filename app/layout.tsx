@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 import { SiteHeader } from "@/components/SiteHeader";
 import { getSiteConfig } from "@/lib/site";
 import "./globals.css";
@@ -7,6 +7,12 @@ import "./globals.css";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
   display: "swap",
 });
 
@@ -27,12 +33,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} h-full`}>
-      <body className="min-h-full bg-white text-neutral-900 antialiased">
+    <html
+      lang="en"
+      className={`${inter.variable} ${montserrat.variable} h-full scroll-smooth`}
+    >
+      <body className="min-h-full bg-white font-[family-name:var(--font-inter)] text-neutral-900 antialiased">
         <SiteHeader />
-        <main className="mx-auto w-full max-w-[1800px] px-5 pb-16 pt-14 md:px-8 md:pt-16 md:pb-24">
-          {children}
-        </main>
+        <main>{children}</main>
       </body>
     </html>
   );

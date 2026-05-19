@@ -37,7 +37,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const galleryImages = project.gallery.length > 0 ? project.gallery : [project.coverImage];
 
   return (
-    <article>
+    <article className="px-5 py-14 md:px-8 md:py-16">
       <Link
         href="/"
         className="mb-8 inline-block text-[13px] text-neutral-500 transition-opacity hover:opacity-60"

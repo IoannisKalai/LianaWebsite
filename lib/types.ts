@@ -31,3 +31,33 @@ export interface AboutSection {
   title: string;
   content: string;
 }
+
+export interface HomeCategory {
+  slug: string;
+  title: string;
+  description: string;
+  image: string;
+  imageClass: string;
+  label?: string;
+}
+
+export interface HomeAboutParagraph {
+  text: string;
+  bold: boolean;
+}
+
+export interface HomeConfig {
+  vibeImage: string;
+  vibeImageAlt: string;
+  categories: HomeCategory[];
+  paintingPortfolio: {
+    label: string;
+    href: string;
+  };
+  carouselImages: string[];
+  aboutPreview: {
+    paragraphs: HomeAboutParagraph[];
+    portraitImage: string;
+    readMoreHref: string;
+  };
+}

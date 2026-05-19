@@ -1,5 +1,5 @@
-import { ProjectGrid } from "@/components/ProjectGrid";
+import { HomePage } from "@/components/HomePage";
 
-export default function HomePage() {
-  return <ProjectGrid />;
+export default function Page() {
+  return <HomePage />;
 }

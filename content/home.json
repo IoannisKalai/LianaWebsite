@@ -1,0 +1,58 @@
+{
+  "vibeImage": "/home/vibe-center.jpg",
+  "vibeImageAlt": "Who we vibe with",
+  "categories": [
+    {
+      "slug": "architecture-interior-design",
+      "title": "Architecture & Interior Design",
+      "description": "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
+      "image": "/home/category-architecture.jpg",
+      "imageClass": "aspect-square w-full max-w-[165px]"
+    },
+    {
+      "slug": "ephemeral-spaces",
+      "title": "Ephemeral Spaces",
+      "description": "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
+      "image": "/home/category-ephemeral.jpg",
+      "imageClass": "aspect-[5/7] w-full max-w-[150px]"
+    },
+    {
+      "slug": "other-stories",
+      "title": "Other Stories",
+      "description": "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
+      "image": "/home/category-other-stories.jpg",
+      "imageClass": "aspect-square w-full max-w-[200px]"
+    }
+  ],
+  "paintingPortfolio": {
+    "label": "Painting Portfolio",
+    "href": "#"
+  },
+  "carouselImages": [
+    "/home/hero-interior.jpg",
+    "/home/carousel-2.jpg",
+    "/home/carousel-3.jpg"
+  ],
+  "aboutPreview": {
+    "paragraphs": [
+      {
+        "text": "Hello! My name is Liana Kalaitzoglou. I'm an architect from Greece!",
+        "bold": true
+      },
+      {
+        "text": "I hold two Master's titles, one in Architectural Engineering [MArch] from the Department of Architectural Engineering of the Democritus Politecnic University of Thrace in Greece and another in Ephemeral Architecture and Temporary Spaces [MEATS] from the University Elisava School of Design and Engineering Barcelona.",
+        "bold": true
+      },
+      {
+        "text": "My interests are focusing on the Design of Temporary Spaces, Public Space Design, Flexible/ Transformable Architecture, Domestic Architecture, and Interior Design! I also worked on projects of retail design and art!",
+        "bold": true
+      },
+      {
+        "text": "Inspired by innovation, I thrive on experimenting with different concepts and have been commended for inspiring and developing unique and thought-provoking ideas. I have cultivated architecture and design, conceptualization, and construction skills. These strengths, combined with my passion for the artistic approach have created a strong foundation to meet the needs of the Architectural Designer opportunity. I strive to contribute to energetic and team-driven work culture.",
+        "bold": false
+      }
+    ],
+    "portraitImage": "/home/about-portrait.jpg",
+    "readMoreHref": "/about/"
+  }
+}
