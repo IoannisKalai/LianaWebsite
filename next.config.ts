@@ -7,6 +7,9 @@ const repoName = "LianaWebsite";
 const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isGithubPages ? `/${repoName}` : "",
+  },
   ...(isGithubPages
     ? { basePath: `/${repoName}`, assetPrefix: `/${repoName}/` }
     : {}),

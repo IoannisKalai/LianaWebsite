@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { assetPath } from "@/lib/asset";
 import type { Project } from "@/lib/types";
 
 interface ProjectCardProps {
@@ -20,7 +21,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           className={`relative w-full overflow-hidden bg-neutral-100 ${aspectClass}`}
         >
           <Image
-            src={project.coverImage}
+            src={assetPath(project.coverImage)}
             alt={project.title}
             fill
             className="object-cover transition-opacity duration-300 group-hover:opacity-90"

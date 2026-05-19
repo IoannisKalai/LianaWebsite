@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { HomeCarousel } from "@/components/HomeCarousel";
+import { assetPath } from "@/lib/asset";
 import { getHomeConfig } from "@/lib/home";
 import { getSiteConfig } from "@/lib/site";
 import type { HomeCategory } from "@/lib/types";
@@ -21,7 +22,7 @@ function CategoryBlock({
         className={`relative overflow-hidden bg-neutral-100/60 ${category.imageClass}`}
       >
         <Image
-          src={category.image}
+          src={assetPath(category.image)}
           alt={category.title}
           fill
           className="object-cover transition-opacity duration-300 group-hover:opacity-90"
@@ -66,7 +67,7 @@ export function HomePage() {
           <div className="flex flex-col items-center lg:col-start-2 lg:row-span-2 lg:row-start-1">
             <div className="relative aspect-square w-full max-w-[min(100%,520px)] overflow-hidden bg-neutral-100/50">
               <Image
-                src={home.vibeImage}
+                src={assetPath(home.vibeImage)}
                 alt={home.vibeImageAlt}
                 fill
                 className="object-cover"
@@ -93,7 +94,7 @@ export function HomePage() {
         </Link>
       </section>
 
-      <HomeCarousel images={home.carouselImages} />
+      <HomeCarousel images={home.carouselImages.map(assetPath)} />
 
       <section className="bg-[#F2F0EB] px-6 py-12 md:px-12 md:py-14 lg:px-16">
         <div className="mx-auto grid max-w-[1100px] grid-cols-1 items-start gap-8 lg:grid-cols-[1fr_240px] lg:gap-12">
@@ -109,7 +110,7 @@ export function HomePage() {
           </div>
           <div className="relative mx-auto aspect-[5/6.5] w-full max-w-[240px] overflow-hidden bg-neutral-100 lg:mx-0 lg:max-w-none">
             <Image
-              src={home.aboutPreview.portraitImage}
+              src={assetPath(home.aboutPreview.portraitImage)}
               alt={site.name}
               fill
               className="object-cover"

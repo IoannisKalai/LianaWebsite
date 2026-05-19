@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { assetPath } from "@/lib/asset";
 import {
   getAllProjectSlugs,
   getProjectBySlug,
@@ -68,7 +69,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               }`}
             >
               <Image
-                src={src}
+                src={assetPath(src)}
                 alt={`${project.title} — image ${index + 1}`}
                 fill
                 className="object-cover"
