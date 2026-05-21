@@ -8,11 +8,26 @@ import { getHomeConfig } from "@/lib/home";
 import { getSiteConfig } from "@/lib/site";
 import type { HomeCategory } from "@/lib/types";
 
-function CategoryBlock({ category }: { category: HomeCategory }) {
+type CategoryAlign = "start" | "center" | "end";
+
+function CategoryBlock({
+  category,
+  align = "center",
+}: {
+  category: HomeCategory;
+  align?: CategoryAlign;
+}) {
+  const lgLayoutClass =
+    align === "start"
+      ? "lg:mr-auto lg:items-start lg:text-left lg:max-w-[280px]"
+      : align === "end"
+        ? "lg:ml-auto lg:items-end lg:text-right lg:max-w-[280px]"
+        : "lg:mx-auto lg:items-center lg:text-center lg:max-w-[280px]";
+
   return (
     <Link
       href={`/projects/${category.slug}/`}
-      className="group flex w-full max-w-md flex-col items-center text-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-neutral-900 sm:max-w-none lg:max-w-[280px] lg:items-start lg:text-left"
+      className={`group flex w-full max-w-md flex-col items-center text-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-neutral-900 sm:max-w-none ${lgLayoutClass}`}
     >
       <div
         className={`relative w-full overflow-hidden bg-neutral-100/60 ${category.imageClass}`}
@@ -49,7 +64,7 @@ export function HomePage() {
       >
         <div className="mx-auto flex w-full max-w-[1280px] flex-col items-center gap-12 lg:grid lg:grid-cols-[minmax(0,0.82fr)_minmax(300px,1.55fr)_minmax(0,0.82fr)] lg:items-start lg:gap-x-8 lg:gap-y-10">
           <div className="w-full lg:col-start-1 lg:row-start-1 lg:justify-self-start lg:pt-[5.5rem]">
-            <CategoryBlock category={architecture} />
+            <CategoryBlock category={architecture} align="start" />
           </div>
 
           <div className="flex w-full flex-col items-center lg:col-start-2 lg:row-span-2 lg:row-start-1">
@@ -64,13 +79,13 @@ export function HomePage() {
                 unoptimized
               />
             </div>
-            <div className="mt-10 w-full lg:mt-12">
-              <CategoryBlock category={otherStories} />
+            <div className="mt-10 flex w-full justify-center lg:mt-12">
+              <CategoryBlock category={otherStories} align="center" />
             </div>
           </div>
 
           <div className="w-full lg:col-start-3 lg:row-start-1 lg:-mt-6 lg:justify-self-end">
-            <CategoryBlock category={ephemeral} />
+            <CategoryBlock category={ephemeral} align="end" />
           </div>
         </div>
 
