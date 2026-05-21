@@ -1,5 +1,49 @@
 export type ImageOrientation = "horizontal" | "vertical";
 
+export type PortfolioSize =
+  | "square"
+  | "portrait"
+  | "portrait-tall"
+  | "landscape"
+  | "landscape-wide";
+
+export interface ProjectCategory {
+  slug: string;
+  navLabel: string;
+  title: string;
+  description: string;
+  image: string;
+}
+
+export interface CategoriesConfig {
+  categories: ProjectCategory[];
+  paintingPortfolio: {
+    label: string;
+    href: string;
+  };
+}
+
+export interface ProjectContentBlock {
+  type: "paragraph" | "heading";
+  text: string;
+}
+
+export interface PortfolioProject {
+  slug: string;
+  category: string;
+  title: string;
+  location: string;
+  hoverDescription: string;
+  coverImage: string;
+  size: PortfolioSize;
+  year: number;
+  description: string;
+  gallery: string[];
+  period?: string;
+  status?: string;
+  content?: ProjectContentBlock[];
+}
+
 export interface Project {
   slug: string;
   title: string;

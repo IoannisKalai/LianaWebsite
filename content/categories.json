@@ -1,0 +1,29 @@
+{
+  "categories": [
+    {
+      "slug": "architecture-interior-design",
+      "navLabel": "Architecture - Interior",
+      "title": "Architecture & Interior Design",
+      "description": "Residential, cultural, and interior work — built form, material, and light explored through permanent and adaptive spaces.",
+      "image": "/home/category-architecture.jpg"
+    },
+    {
+      "slug": "ephemeral-spaces",
+      "navLabel": "Ephemeral Spaces",
+      "title": "Ephemeral Spaces",
+      "description": "Temporary installations, exhibitions, and spatial experiments that frame how people gather and move.",
+      "image": "/home/category-ephemeral.jpg"
+    },
+    {
+      "slug": "other-stories",
+      "navLabel": "Other Stories",
+      "title": "Other Stories",
+      "description": "Parallel interests — research, workshops, and collaborations alongside the built practice.",
+      "image": "/home/category-other-stories.jpg"
+    }
+  ],
+  "paintingPortfolio": {
+    "label": "Painting Portfolio",
+    "href": "#"
+  }
+}

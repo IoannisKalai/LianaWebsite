@@ -37,9 +37,9 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${montserrat.variable} h-full scroll-smooth`}
     >
-      <body className="min-h-full bg-white font-[family-name:var(--font-inter)] text-neutral-900 antialiased">
+      <body className="flex min-h-screen flex-col bg-home-surface font-[family-name:var(--font-inter)] text-neutral-900 antialiased">
         <SiteHeader />
-        <main>{children}</main>
+        <main className="flex flex-1 flex-col">{children}</main>
       </body>
     </html>
   );

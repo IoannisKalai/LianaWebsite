@@ -45,7 +45,7 @@ export function AboutPageContent() {
 
   return (
     <>
-      <section className="w-full bg-home-surface pt-6 md:pt-8">
+      <section className="w-full bg-home-surface pt-4 md:pt-6">
         <div className="relative aspect-[16/7] w-full min-h-[280px] bg-neutral-300 md:min-h-[360px] lg:min-h-[420px]">
           <Image
             src={assetPath(about.heroImage)}
@@ -59,7 +59,7 @@ export function AboutPageContent() {
         </div>
       </section>
 
-      <section className="bg-[#F2F0EB] px-6 py-12 md:px-12 md:py-16 lg:px-16">
+      <section className="bg-home-surface px-6 py-12 md:px-12 md:py-16 lg:px-16">
         <AboutIntro
           paragraphs={about.introduction.paragraphs}
           portraitImage={about.introduction.portraitImage}
@@ -67,7 +67,7 @@ export function AboutPageContent() {
         />
       </section>
 
-      <section className="bg-[#F2F0EB] px-6 pb-16 md:px-12 md:pb-20 lg:px-16 lg:pb-24">
+      <section className="bg-home-surface px-6 pb-16 md:px-12 md:pb-20 lg:px-16 lg:pb-24">
         <div className="mx-auto grid max-w-[1100px] grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-20">
           <CvColumn
             title={about.education.title}
@@ -82,7 +82,7 @@ export function AboutPageContent() {
 
       <section
         id="contact"
-        className="scroll-mt-28 bg-[#F2F0EB] px-6 pb-16 md:scroll-mt-32 md:px-12 md:pb-20 lg:px-16 lg:pb-24"
+        className="scroll-mt-28 bg-home-surface px-6 pb-16 md:scroll-mt-32 md:px-12 md:pb-20 lg:px-16 lg:pb-24"
       >
         <div className="mx-auto grid max-w-[1100px] grid-cols-1 items-start gap-10 lg:grid-cols-[1fr_280px] lg:gap-14">
           <div>

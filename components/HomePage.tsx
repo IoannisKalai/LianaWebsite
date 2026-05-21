@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { AboutIntro } from "@/components/AboutIntro";
 import { HomeCarousel } from "@/components/HomeCarousel";
+import { SiteFooter } from "@/components/SiteFooter";
 import { assetPath } from "@/lib/asset";
 import { getHomeConfig } from "@/lib/home";
 import { getSiteConfig } from "@/lib/site";
@@ -58,7 +59,7 @@ export function HomePage() {
     <>
       <section
         id="projects"
-        className="relative bg-home-surface px-6 pb-20 pt-14 md:px-12 md:pt-20 lg:px-16 lg:pb-24 lg:pt-24"
+        className="relative bg-home-surface px-6 pb-20 pt-6 md:px-12 md:pt-8 lg:px-16 lg:pb-24"
       >
         <div className="mx-auto grid max-w-[1280px] grid-cols-1 items-start gap-14 lg:grid-cols-[minmax(0,0.82fr)_minmax(300px,1.55fr)_minmax(0,0.82fr)] lg:gap-x-8 lg:gap-y-10">
           <div className="flex justify-center lg:col-start-1 lg:row-start-1 lg:justify-start lg:pt-[5.5rem]">
@@ -97,7 +98,7 @@ export function HomePage() {
 
       <HomeCarousel images={home.carouselImages.map(assetPath)} />
 
-      <section className="bg-[#F2F0EB] px-6 py-12 md:px-12 md:py-14 lg:px-16">
+      <section className="bg-home-surface px-6 py-12 md:px-12 md:py-14 lg:px-16">
         <AboutIntro
           paragraphs={home.aboutPreview.paragraphs}
           portraitImage={home.aboutPreview.portraitImage}
@@ -113,42 +114,7 @@ export function HomePage() {
         </div>
       </section>
 
-      <footer
-        id="contact"
-        className="bg-white px-6 py-5 text-center text-[12px] text-neutral-900 md:px-12 md:py-6"
-      >
-        <h2 className="font-[family-name:var(--font-montserrat)] text-[12px] font-bold uppercase tracking-[0.2em]">
-          Contact
-        </h2>
-        <div className="mx-auto mt-4 flex max-w-[900px] flex-col gap-2 text-left sm:flex-row sm:justify-between sm:gap-8">
-          <p>
-            <span className="font-bold">Email address: </span>
-            <a
-              href={`mailto:${site.contact.email}`}
-              className="hover:opacity-60"
-            >
-              {site.contact.email}
-            </a>
-          </p>
-          {site.contact.phone ? (
-            <p className="sm:text-right">
-              <span className="font-bold">Phone number: </span>
-              <a
-                href={`tel:${site.contact.phone.replace(/\s/g, "")}`}
-                className="hover:opacity-60"
-              >
-                {site.contact.phone}
-              </a>
-            </p>
-          ) : null}
-        </div>
-        <a
-          href="#top"
-          className="mt-5 inline-block font-[family-name:var(--font-montserrat)] text-[10px] font-bold uppercase tracking-[0.2em] hover:opacity-60"
-        >
-          Top
-        </a>
-      </footer>
+      <SiteFooter />
     </>
   );
 }
