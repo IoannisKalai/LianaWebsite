@@ -14,7 +14,7 @@ export function AboutIntro({
   portraitAlt,
 }: AboutIntroProps) {
   return (
-    <div className="mx-auto grid max-w-[1100px] grid-cols-1 items-start gap-8 lg:grid-cols-[1fr_240px] lg:gap-12">
+    <div className="mx-auto grid w-full max-w-[1100px] grid-cols-1 items-start gap-8 md:grid-cols-[1fr_200px] md:gap-10 lg:grid-cols-[1fr_240px] lg:gap-12">
       <div className="space-y-4 font-[family-name:var(--font-montserrat)] text-[13px] leading-[1.65] text-neutral-900 md:text-[14px] md:leading-[1.7]">
         {paragraphs.map((paragraph, index) => (
           <p

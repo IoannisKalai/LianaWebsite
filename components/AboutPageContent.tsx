@@ -59,7 +59,7 @@ export function AboutPageContent() {
         </div>
       </section>
 
-      <section className="bg-home-surface px-6 py-12 md:px-12 md:py-16 lg:px-16">
+      <section className="bg-home-surface px-4 py-10 sm:px-6 md:px-12 md:py-16 lg:px-16">
         <AboutIntro
           paragraphs={about.introduction.paragraphs}
           portraitImage={about.introduction.portraitImage}
@@ -67,8 +67,8 @@ export function AboutPageContent() {
         />
       </section>
 
-      <section className="bg-home-surface px-6 pb-16 md:px-12 md:pb-20 lg:px-16 lg:pb-24">
-        <div className="mx-auto grid max-w-[1100px] grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-20">
+      <section className="bg-home-surface px-4 pb-14 sm:px-6 md:px-12 md:pb-20 lg:px-16 lg:pb-24">
+        <div className="mx-auto grid w-full max-w-[1100px] grid-cols-1 gap-14 md:grid-cols-2 md:gap-16 lg:gap-20">
           <CvColumn
             title={about.education.title}
             entries={about.education.entries}
@@ -82,9 +82,9 @@ export function AboutPageContent() {
 
       <section
         id="contact"
-        className="scroll-mt-28 bg-home-surface px-6 pb-16 md:scroll-mt-32 md:px-12 md:pb-20 lg:px-16 lg:pb-24"
+        className="scroll-mt-28 bg-home-surface px-4 pb-14 sm:px-6 md:scroll-mt-32 md:px-12 md:pb-20 lg:px-16 lg:pb-24"
       >
-        <div className="mx-auto grid max-w-[1100px] grid-cols-1 items-start gap-10 lg:grid-cols-[1fr_280px] lg:gap-14">
+        <div className="mx-auto grid w-full max-w-[1100px] grid-cols-1 items-start gap-10 md:grid-cols-[1fr_240px] md:gap-12 lg:grid-cols-[1fr_280px] lg:gap-14">
           <div>
             <h2 className="font-[family-name:var(--font-montserrat)] text-[13px] font-bold uppercase tracking-[0.12em] text-neutral-900 md:text-[14px]">
               {about.contact.title}
@@ -115,7 +115,7 @@ export function AboutPageContent() {
               </div>
             </div>
           </div>
-          <div className="mx-auto w-full max-w-[280px] lg:mx-0 lg:max-w-none">
+          <div className="mx-auto w-full max-w-[min(100%,280px)] md:mx-0 md:max-w-none">
             <HomeCarousel
               images={about.contact.carouselImages.map(assetPath)}
               alt="Contact"

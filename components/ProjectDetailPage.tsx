@@ -26,13 +26,13 @@ export function ProjectDetailPage({
 
   return (
     <div className="bg-home-surface">
-      <section className="px-6 pb-6 pt-2 md:px-12 md:pb-8 md:pt-3">
+      <section className="px-4 pb-5 pt-2 sm:px-6 md:px-12 md:pb-8 md:pt-3">
         <ProjectCloseNav fallbackHref={fallbackHref} />
       </section>
 
       <ProjectDetailCarousel images={gallery} alt={project.title} />
 
-      <article className="px-6 pb-8 md:px-12 lg:px-16">
+      <article className="px-4 pb-8 sm:px-6 md:px-12 lg:px-16">
         <div className="mx-auto max-w-[1100px]">
           <div className="mt-12 grid grid-cols-1 gap-10 md:mt-16 md:grid-cols-[minmax(0,200px)_1fr] md:gap-x-16 lg:gap-x-24">
             <header className="font-[family-name:var(--font-montserrat)] text-neutral-900">

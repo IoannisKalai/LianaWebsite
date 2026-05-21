@@ -13,11 +13,19 @@
   --font-sans: var(--font-inter);
 }
 
+html {
+  overflow-x: clip;
+}
+
 html,
 body {
   background: var(--home-surface);
   color: var(--foreground);
   font-family: var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+body {
+  overflow-x: clip;
 }
 
 ::selection {

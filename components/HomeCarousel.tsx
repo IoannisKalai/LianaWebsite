@@ -52,7 +52,7 @@ function ChevronRight({ className }: { className?: string }) {
 export function HomeCarousel({
   images,
   alt = "Featured project",
-  frameClassName = "aspect-[16/7] min-h-[300px] lg:min-h-[400px]",
+  frameClassName = "aspect-[16/9] min-h-[220px] sm:aspect-[16/8] sm:min-h-[280px] md:aspect-[16/7] md:min-h-[300px] lg:min-h-[400px]",
   imageSizes = "100vw",
 }: HomeCarouselProps) {
   const [index, setIndex] = useState(0);
@@ -87,7 +87,7 @@ export function HomeCarousel({
             <button
               type="button"
               onClick={goPrev}
-              className="absolute left-4 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border-0 bg-black/15 text-white/95 backdrop-blur-sm transition duration-200 hover:bg-black/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/80 md:left-8 md:h-12 md:w-12"
+              className="absolute left-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border-0 bg-black/15 text-white/95 backdrop-blur-sm transition duration-200 hover:bg-black/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/80 sm:left-4 sm:h-11 sm:w-11 md:left-8 md:h-12 md:w-12"
               aria-label="Previous image"
             >
               <ChevronLeft />
@@ -95,7 +95,7 @@ export function HomeCarousel({
             <button
               type="button"
               onClick={goNext}
-              className="absolute right-4 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border-0 bg-black/15 text-white/95 backdrop-blur-sm transition duration-200 hover:bg-black/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/80 md:right-8 md:h-12 md:w-12"
+              className="absolute right-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border-0 bg-black/15 text-white/95 backdrop-blur-sm transition duration-200 hover:bg-black/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/80 sm:right-4 sm:h-11 sm:w-11 md:right-8 md:h-12 md:w-12"
               aria-label="Next image"
             >
               <ChevronRight />
